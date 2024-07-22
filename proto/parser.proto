@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package parser;
+
+option go_package = "parser/gen/pb;pb";
+
+service parser {
+    rpc GetCurrentBlock(GetCurrentBlockRequest) returns (GetCurrentBlockResponse) {};
+}
+
+message GetCurrentBlockRequest {}
+
+// The response for GetCurrentBlock()
+message GetCurrentBlockResponse {
+    int64 id = 1;
+}
